@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "publish": "npm run build gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -41,6 +42,6 @@
   },
   "homepage": "https://jeffreyyoung.github.io/vr-graph/",
   "devDependencies": {
-    "gh-pages": "^0.12.0"
+    "gh-pages": "^1.1.0"
   }
 }
