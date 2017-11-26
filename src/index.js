@@ -7,6 +7,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import BarGraph from './BarGraph';
 import Bar from './Bar';
+import skyImg from './../public/sky.jpg'
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +25,7 @@ class App extends React.Component {
     return (
       <Scene>
         <a-assets>
-             <img id="backgroundInsideHouse" alt="pretty sky" src="/sky.jpg"/>
+             <img id="backgroundInsideHouse" alt="pretty sky" src={skyImg}/>
         </a-assets>
         <Entity light={{type: 'point'}}/>
         <a-sky id="background-img" src="#backgroundInsideHouse"></a-sky>
