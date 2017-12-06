@@ -5,25 +5,20 @@ import Bar from './Bar';
 class BarGraph extends React.Component {
   static get defaultProps() {
     return {
-      columns: [{
-        label: 'meow'
-      }],
-      width: 1,
-      x: 2,
-      y: 0,
-      z: -5,
+      data:[]
     }
   }
   
   render() {
-    return (
-      [
-        <Bar key={1} x={1} z={-10}/>,
-        <Bar key={2} x={3} z={-10}/>,
-        <Bar key={3} x={5} z={-10}/>,
-        <Bar key={5} x={7} z={-10}/>,
-      ]
-    )
+    const data = this.props.data;
+    const xStart = 0 - ( (this.props.data.length * 2) / 2 );
+    const yStart = -10
+    return data.map((row, i) => {
+        const keys = Object.keys(row).filter(k => k);
+        const value = keys.length ? row[keys[0]] : "";
+        const height = parseInt(value.replace(',',''));
+        return (<Bar key={i} height={height + yStart} y={height/2 + yStart} width={1} z={-100} x={xStart + (i*2)}/>)
+      })
   }
 }
 

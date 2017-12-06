@@ -8,13 +8,14 @@ class Bar extends React.Component {
       x: 2,
       y: 0,
       z: -5,
+      color: 'green'
     }
   }
   
   render() {
-    const {height, width,x,y,z} = this.props;
+    const {height, width,x,y,z, color} = this.props;
     return (
-      <Entity geometry={{primitive: 'box', height,width}} material={{color: 'green'}} position={{x,y,z}}/>
+      <Entity geometry={{primitive: 'box', height,width}} material={{color}} position={{x,y,z}}/>
     )
   }
 }
