@@ -8,6 +8,7 @@
     "aframe-particle-system-component": "^1.0.8",
     "aframe-react": "^4.0.x",
     "babel-polyfill": "^6.3.14",
+    "lodash": "^4.17.4",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-scripts": "0.9.5",
